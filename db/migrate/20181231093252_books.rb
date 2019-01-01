@@ -1,4 +1,4 @@
-class Books < ActiveRecord::Migration[4,2]
+class Books < ActiveRecord::Migration[5.1]
   def self.up
     create_table :books do |t|
       t.column :title, :string, :limit => 32, :null => false
@@ -6,6 +6,7 @@ class Books < ActiveRecord::Migration[4,2]
       t.column :subject_id, :integer
       t.column :description, :text
       t.column :created_at, :timestamp
+      t.timestamps
     end
   end
 

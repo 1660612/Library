@@ -1,7 +1,8 @@
-class Subjects < ActiveRecord::Migration[4,2]
+class Subjects < ActiveRecord::Migration[5.1]
   def self.up
     create_table :subjects do |t|
       t.column :name, :string
+      t.timestamps
     end
 
     Subject.create :name => "Physics"
